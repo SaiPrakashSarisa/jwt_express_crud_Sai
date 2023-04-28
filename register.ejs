@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registeration form</title>
+    <!-- <link rel="stylesheet" href="register.css" /> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul {
+        display: flex;
+        background-color: blueviolet;
+      }
+
+      nav ul li,
+      span {
+        list-style: none;
+        padding: 30px;
+        color: whitesmoke;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      nav ul a {
+        text-decoration: none;
+      }
+
+      nav ul li:hover {
+        background-color: black;
+      }
+
+      .formDiv {
+        display: flex;
+        height: 90vh;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      form h1 {
+        padding: 15px;
+        margin: 10px;
+        color: whitesmoke;
+        font-family: "Teko", sans-serif;
+      }
+      fieldset {
+        width: 366px;
+        border: none;
+        color: whitesmoke;
+      }
+
+      fieldset input {
+        margin: 12px;
+        outline: none;
+        padding: 5px;
+        border-radius: 2.5px;
+        width: 300px;
+        background-color: transparent;
+        color: whitesmoke;
+      }
+
+      fieldset #btn {
+        background-color: green;
+        padding: 8px;
+        color: black;
+        width: 150px;
+        position: relative;
+        right: -80px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainDiv">
+      <div class="navDiv">
+        <nav>
+          <ul>
+            <span>Registeration Form</span>
+            <a href="/"><li>Log in</li></a>
+            <a href="#"><li>Users List</li></a>
+          </ul>
+        </nav>
+      </div>
+      <div class="formDiv">
+        <!-- form starting -->
+        <form id="myForm" action="/adduser" method="post">
+          <h1>Registeration Form</h1>
+          <!-- taking user name -->
+          <fieldset>
+            <legend>User Name</legend>
+            <input type="text" id="userName" name="username" required />
+          </fieldset>
+          <!-- taking user email id -->
+          <fieldset>
+            <legend>User Email</legend>
+            <input
+              type="email"
+              id="mail"
+              name="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              required
+            />
+          </fieldset>
+          <!-- taking user phone number -->
+          <fieldset>
+            <legend>Phone Number</legend>
+            <input
+              type="text"
+              id="phno"
+              name="mobile"
+              pattern="[6-9]{1}[0-9]{9}"
+              required
+            />
+          </fieldset>
+          <!-- taking user address -->
+          <fieldset>
+            <legend>Password</legend>
+            <input type="text" id="address" name="pass" required />
+          </fieldset>
+          <!-- submit button -->
+          <fieldset>
+            <input type="submit" id="btn" value="Register" />
+          </fieldset>
+        </form>
+        <!-- form ending -->
+      </div>
+    </div>
+    <!-- adding script tag after the form -->
+    <!-- <script src="register.js"></script> -->
+    <!-- <script src="register.js"></script> -->
+  </body>
+</html>
